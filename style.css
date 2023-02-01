@@ -1,0 +1,165 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif; 
+    text-transform:capitalize;
+}
+.photo img{
+width: 100vw;
+}
+.photo{
+    font-size: 0px;
+}
+footer{
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 80px 0 30px;
+    overflow: hidden;
+}
+/* footer content */ 
+.row{
+   width:85%;
+   margin: auto;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: flex-start;
+   justify-content: space-between;
+}
+.col{
+    flex-basis: 16%;
+    padding: 10px;
+}
+.col h3{
+    font-size:1.4rem;
+    width: fit-content;
+    margin-bottom: 30px;
+    position: relative;
+}
+.col h3::before{
+    content: '';
+    position: absolute;
+    bottom:-8px;
+    width:0%;
+    height:1px;
+    background-color: #ccc;
+    border-radius: 3px;
+    animation: moving 3s linear infinite;
+}
+@keyframes moving{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.nav-icon .fa-sharp{
+    display: none;
+}
+.col ul {
+    margin: 0%;
+    padding: 0%;
+}
+.col ul li {
+    list-style: none;
+    margin: 5px;
+}
+.col ul li a{
+    text-decoration: none;
+    color: white;
+    font-size:0.8rem;
+}
+
+/* icon section */
+.icon{
+    width:85%;
+    margin: auto;
+    text-align: right; 
+    margin-top: 10px;
+}
+.fa-brands{
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+hr{
+    width: 90%;
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    margin: 20px auto;
+}
+.copy-right{
+    text-align: center;
+}
+@media (max-width:1250px) {
+    
+    footer{
+       
+    }
+   
+    .col{
+        flex-basis: 30%;
+    }
+    .row{
+        justify-content: flex-start;
+    }
+    .col h3{
+        font-size: 1rem;
+    }
+}
+@media (max-width:800px) {
+    footer{
+       background-color: black;
+       padding: 0px;
+       position: absolute;
+    }
+    .col{
+       flex-basis: 100%;
+       border-bottom: 1px solid white;
+    }
+    .row{
+        width: 100%;
+    }
+    .col h3::before{
+        display: none;
+    }
+     ul {
+        display:none;
+        background-color:#232526; 
+    }
+   .col ul li {
+        margin:0px;
+        padding: 5px 0px 5px 20px;
+    }
+    .col ul li a{
+        font-size: 0.8rem;
+    }
+    .icon{
+        width: 100%;
+    }
+    hr{
+        width: 100%;
+    }
+    .col{
+        padding: 0%;
+        position: relative;
+    }
+   .nav-icon .fa-sharp{
+        display: inline-block;
+        transition-duration: 0.5s;
+    }
+    .nav-icon h3{
+        margin: 0px;
+        font-size: 0.8rem;
+    }
+    .nav-icon {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:20px;
+    }
+}
