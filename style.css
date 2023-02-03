@@ -1,165 +1,270 @@
-body{
+body {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
-    font-family: 'Kanit', sans-serif; 
-    text-transform:capitalize;
+    text-transform: capitalize;
 }
-.photo img{
-width: 100vw;
+
+/*================global veriable section ===================*/
+
+:root {
+    --white-color: white;
+    --black-color: black;
 }
-.photo{
+
+.dark-theme {
+    --white-color: black;
+    --black-color: white;
+}
+
+/*====================photo section=================*/
+
+.photo img {
+    width: 100%;
+}
+
+.photo {
     font-size: 0px;
 }
-footer{
+/*=======================theme change containt=======================*/
+
+#mode {
+    margin-top: 20px;
+    position: absolute;
+    right: 5%;
+    width: 50px;
+    height: 18px;
+    border: 1px solid var(--white-color);
+    background-color: var(--black-color);
+    border-radius: 20px;
+    transition: 1s;
+}
+.ball {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 20px;
+    height: 18px;
+    background-color: var(--white-color);
+    border-radius: 20px;
+    transition: 1s;
+}
+.position {
+    left: 30px;
+}
+
+/*======================footer containt========================*/
+
+footer {
     width: 100%;
-    background-color: black;
-    color: white;
+    background-color: var(--black-color);
+    color: var(--white-color);
     font-size: 13px;
     line-height: 20px;
     padding: 80px 0 30px;
     overflow: hidden;
+    transition: 1s;
 }
-/* footer content */ 
-.row{
-   width:85%;
-   margin: auto;
-   display: flex;
-   flex-wrap: wrap;
-   align-items: flex-start;
-   justify-content: space-between;
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
 }
-.col{
+
+.col {
     flex-basis: 16%;
     padding: 10px;
 }
-.col h3{
-    font-size:1.4rem;
+
+.col h3 {
+    font-size: 1.4rem;
     width: fit-content;
     margin-bottom: 30px;
     position: relative;
+    color: var(--white-color);
 }
-.col h3::before{
+.col h3::before {
     content: '';
     position: absolute;
-    bottom:-8px;
-    width:0%;
-    height:1px;
-    background-color: #ccc;
+    bottom: -8px;
+    width: 0%;
+    height: 1px;
+    background-color: var(--white-color);
     border-radius: 3px;
     animation: moving 3s linear infinite;
 }
-@keyframes moving{
-    0%{
+
+@keyframes moving {
+    0% {
         width: 0%;
     }
-    100%{
+
+    100% {
         width: 100%;
     }
 }
-.nav-icon .fa-sharp{
+
+.nav-icon .fa-sharp {
     display: none;
 }
+
 .col ul {
     margin: 0%;
     padding: 0%;
 }
+
 .col ul li {
     list-style: none;
     margin: 5px;
 }
-.col ul li a{
+
+.col ul li a {
     text-decoration: none;
-    color: white;
-    font-size:0.8rem;
+    color: var(--white-color);
+    font-size: 0.8rem;
 }
 
-/* icon section */
-.icon{
-    width:85%;
+/*========================icon section===========================*/
+
+.icon {
+    width: 85%;
     margin: auto;
-    text-align: right; 
+    text-align: right;
     margin-top: 10px;
 }
-.fa-brands{
+
+.fa-brands {
     font-size: 20px;
     margin: 10px;
     cursor: pointer;
+    color: var(--white-color);
 }
-hr{
+/*==========================underline section=========================*/
+
+hr {
     width: 90%;
     border: 0;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid var(--white-color);
     margin: 20px auto;
 }
-.copy-right{
+
+/*================================copy write section=======================*/
+.copy-right {
     text-align: center;
+    color: var(--white-color);
 }
+/*====================================css compleate for big screen====================*/
+
+
+/*================================media queary for 1250px screen =========================*/
 @media (max-width:1250px) {
-    
-    footer{
-       
-    }
-   
-    .col{
+    .col {
         flex-basis: 30%;
     }
-    .row{
+
+    .row {
         justify-content: flex-start;
     }
-    .col h3{
+
+    .col h3 {
         font-size: 1rem;
     }
 }
+
+/*=======================media quary for mobaile & tab secreen=========================*/
+
 @media (max-width:800px) {
-    footer{
-       background-color: black;
-       padding: 0px;
-       position: absolute;
+    footer {
+        padding-top: 20px;
     }
-    .col{
-       flex-basis: 100%;
-       border-bottom: 1px solid white;
+
+    .col {
+        flex-basis: 100%;
+        border-bottom: 1px solid var(--white-color);
     }
-    .row{
+
+    .row {
         width: 100%;
     }
-    .col h3::before{
+
+    .col h3::before {
         display: none;
     }
-     ul {
-        display:none;
-        background-color:#232526; 
+
+    ul {
+        display: none;
+        background-color: #232526;
     }
-   .col ul li {
-        margin:0px;
+
+    .col ul li {
+        margin: 0px;
         padding: 5px 0px 5px 20px;
     }
-    .col ul li a{
-        font-size: 0.8rem;
+
+    .col ul li a {
+        font-size: 0.7rem;
+        color: white;
     }
-    .icon{
+
+    .icon {
         width: 100%;
     }
-    hr{
+
+    hr {
         width: 100%;
     }
-    .col{
+
+    .col {
         padding: 0%;
         position: relative;
     }
-   .nav-icon .fa-sharp{
+
+    .nav-icon .fa-sharp {
         display: inline-block;
         transition-duration: 0.5s;
+        color: var(--white-color);
     }
-    .nav-icon h3{
+
+    .nav-icon h3 {
         margin: 0px;
         font-size: 0.8rem;
     }
+
     .nav-icon {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding:20px;
+        padding: 20px;
+    }
+
+    #mode {
+        margin-top: 5px;
+        right: 5%;
+        width: 50px;
+        height: 12px;
+        border: 1px solid var(--white-color);
+        background-color: var(--black-color);
+        border-radius: 20px;
+        transition: 1s;
+    }
+
+    .ball {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 20px;
+        height: 12px;
+        background-color: var(--white-color);
+        border-radius: 20px;
+        transition: 1s;
+    }
+
+    .position {
+        left: 30px;
     }
 }
+
+/*========================complete all css==============================*/
